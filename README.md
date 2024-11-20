@@ -49,7 +49,7 @@ new Chronex('2024-11-20 16:09:12', 'fr', true, 1000);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chronex Example</title>
-    <script src="[Chronex.js](https://cdn.jsdelivr.net/gh/emmadiblo/chronex@main/chronex.js)"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emmadiblo/chronex@main/chronex.js"></script>
 </head>
 <body>
 
