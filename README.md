@@ -20,11 +20,11 @@ Chronex est un framework JavaScript qui permet d'afficher le temps écoulé entr
 
 ## Installation
 
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/emmadiblo/chronex.git
+ Inclurer le fichier du framwork en haut dans  ```head ``` :
    ```
-2. Incluez le fichier `Chronex.js` dans votre projet HTML.
+    <script src="[Chronex.js](https://cdn.jsdelivr.net/gh/emmadiblo/chronex@main/chronex.js)"></script>
+   ```
+
 
 ## Utilisation
 
@@ -37,7 +37,7 @@ Ajoutez un élément HTML avec l'ID `time-ago` :
 Initialisez le framework avec votre date et vos préférences :
 
 ```javascript
-new Chronex('2024-11-20 16:09:12', 'fr', true, 2000);
+new Chronex('2024-11-20 16:09:12', 'fr', true, 1000);
 ```
 
 ### Exemple Complet
@@ -49,14 +49,21 @@ new Chronex('2024-11-20 16:09:12', 'fr', true, 2000);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chronex Example</title>
-    <script src="Chronex.js"></script>
+    <script src="[Chronex.js](https://cdn.jsdelivr.net/gh/emmadiblo/chronex@main/chronex.js)"></script>
 </head>
 <body>
 
 <span id="time-ago"></span>
 
 <script>
-    new Chronex('2024-11-20 16:09:12', 'fr', true, 2000);
+ const date = '2024-11-20 16:34:00'; // Date à afficher
+    const language = 'ar'; // Langue (par exemple, 'en', 'fr', 'es')
+    const autoUpdate = true; // Indique si l'actualisation automatique est activée
+    const updateInterval = 1000; // Délai de mise à jour en millisecondes(ici 1 sec)
+
+    // Initialiser le framework
+    new Chronex(date, language, autoUpdate, updateInterval);
+    // ou new Chronex('2024-11-20 16:09:12', 'fr', true, 1000);
 </script>
 
 </body>
