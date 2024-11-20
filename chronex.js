@@ -129,24 +129,36 @@ https://github.com/emmadiblo/chronex
         }
     }
 
-    updateTimeAgo() {
-        const now = Date.now();
-        const timeDiff = Math.floor((now - this.date.getTime()) / 1000);
-        let timeString = '';
+updateTimeAgo() {
+    const now = Date.now();
+    const timeDiff = Math.floor((now - this.date.getTime()) / 1000);
+    let timeString = '';
 
-        if (timeDiff < 60) {
-            timeString = timeDiff + " " + (timeDiff === 1 ? this.languages[this.language]['second'] : this.languages[this.language]['seconds']);
-        } else if (timeDiff < 3600) {
-            const minutes = Math.floor(timeDiff / 60);
-            timeString = minutes + " " + (minutes === 1 ? this.languages[this.language]['minute'] : this.languages[this.language]['minutes']);
-        } else if (timeDiff < 86400) {
-            const hours = Math.floor(timeDiff / 3600);
-            timeString = hours + " " + (hours === 1 ? this.languages[this.language]['hour'] : this.languages[this.language]['hours']);
-        } else {
-            const days = Math.floor(timeDiff / 86400);
-            timeString = days + " " + (days === 1 ? this.languages[this.language]['day'] : this.languages[this.language]['days']);
-        }
-
-        this.timeAgoElement.innerText = timeString;
+    if (timeDiff < 60) {
+        timeString = timeDiff + " " + (timeDiff === 1 ? this.languages[this.language]['second'] : this.languages[this.language]['seconds']);
+    } else if (timeDiff < 3600) {
+        const minutes = Math.floor(timeDiff / 60);
+        timeString = minutes + " " + (minutes === 1 ? this.languages[this.language]['minute'] : this.languages[this.language]['minutes']);
+    } else if (timeDiff < 86400) {
+        const hours = Math.floor(timeDiff / 3600);
+        timeString = hours + " " + (hours === 1 ? this.languages[this.language]['hour'] : this.languages[this.language]['hours']);
+    } else if (timeDiff < 604800) {
+        const days = Math.floor(timeDiff / 86400);
+        timeString = days + " " + (days === 1 ? this.languages[this.language]['day'] : this.languages[this.language]['days']);
+    } else if (timeDiff < 2629746) {
+        const weeks = Math.floor(timeDiff / 604800);
+        const remainingDays = Math.floor((timeDiff % 604800) / 86400);
+        timeString = weeks + " " + (weeks === 1 ? this.languages[this.language]['week'] : this.languages[this.language]['weeks']) + (remainingDays > 0 ? ` ${remainingDays} ${this.languages[this.language]['day']}` : '');
+    } else if (timeDiff < 31556952) {
+        const months = Math.floor(timeDiff / 2629746);
+        const remainingWeeks = Math.floor((timeDiff % 2629746) / 604800);
+        timeString = months + " " + (months === 1 ? this.languages[this.language]['month'] : this.languages[this.language]['months']) + (remainingWeeks > 0 ? ` ${remainingWeeks} ${this.languages[this.language]['week']}` : '');
+    } else {
+        const years = Math.floor(timeDiff / 31556952);
+        const remainingMonths = Math.floor((timeDiff % 31556952) / 2629746);
+        timeString = years + " " + (years === 1 ? this.languages[this.language]['year'] : this.languages[this.language]['years']) + (remainingMonths > 0 ? ` ${remainingMonths} ${this.languages[this.language]['month']}` : '');
     }
+
+    this.timeAgoElement.innerText = timeString;
+}
 }
