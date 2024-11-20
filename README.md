@@ -1,5 +1,4 @@
 
-```markdown
 # Chronex
 
 Chronex est un framework JavaScript qui permet d'afficher le temps écoulé entre une date spécifiée et le moment actuel. Il prend en charge plusieurs langues et peut être configuré pour mettre à jour automatiquement l'affichage du temps.
