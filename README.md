@@ -22,7 +22,7 @@ Chronex est un framework JavaScript qui permet d'afficher le temps écoulé entr
 
  Inclurer le fichier du framwork en haut dans  ```head ``` :
    ```
-    <script src="[Chronex.js](https://cdn.jsdelivr.net/gh/emmadiblo/chronex@main/chronex.js)"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emmadiblo/chronex@main/chronex.js"></script>
    ```
 
 
