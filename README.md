@@ -88,7 +88,7 @@ Les contributions sont les bienvenues ! Pour contribuer :
 
 ### Creative Commons Attribution-NonCommercial 4.0 International License
 
-Copyright (c) 2024 [Votre Nom ou Organisation]
+Copyright (c) 2024 [Emma diblo]
 
 #### Conditions de la licence
 
