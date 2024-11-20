@@ -1,7 +1,28 @@
+    
 {
   "name": "chronex",
-  "version": "1.0",
-  "description": "Chronex est un framework JavaScript qui permet d'afficher le temps écoulé entre une date spécifiée et le moment actuel. Il prend en charge plusieurs langues et peut être configuré pour mettre à jour automatiquement l'affichage du temps",
-  "main": "chronex.js", 
-  "license": "Creative Commons"
-}     
+  "version": "1.0.0",
+  "description": "Chronex est un framework JavaScript qui permet d'afficher le temps écoulé entre une date spécifiée et le moment actuel. Il prend en charge plusieurs langues et peut être configuré pour mettre à jour automatiquement l'affichage du temps.",
+  "main": "chronex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emmadiblo/chronex.git"
+  },
+  "keywords": [
+    "chrono",
+    "temps",
+    "JavaScript",
+    "framework",
+    "chronex",
+    "js"
+  ],
+  "author": "Emmadiblo",
+  "license": "MIT",
+  "homepage": "https://github.com/emmadiblo/chronex#readme",
+  "bugs": {
+    ""
+  }
+}
