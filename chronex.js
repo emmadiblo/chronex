@@ -1,6 +1,7 @@
 /*
 Chronex.js V 1.0
-
+npm package: https://www.npmjs.com/package/chronex
+jsdelivr script: <script src="https://cdn.jsdelivr.net/gh/emmadiblo/chronex@main/chronex.js"></script>
 #Timer Javascript framwork
 
 Developped by Emmadiblo
@@ -9,7 +10,7 @@ https://github.com/emmadiblo/chronex
 
 
  .d88b.  db   db d8888b.  .d88b.  d8b   db d88888b db    db 
-.8P  Y8. 88   88 88  `8D .8P  Y8. 888o  88 88'     `8b  d8' 
+.8P      88   88 88  `8D .8P  Y8. 888o  88 88'     `8b  d8' 
 88       88ooo88 88oobY' 88    88 88V8o 88 88ooooo  `8bd8'  
 88       88~~~88 88`8b   88    88 88 V8o88 88~~~~~  .dPYb.  
 `8b      88   88 88 `88. `8b  d8' 88  V888 88.     .8P  Y8. 
